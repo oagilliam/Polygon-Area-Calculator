@@ -39,3 +39,8 @@ class Rectangle:
         if width2 == height2:
             self.square = width2**2
             amount_square = (self.width *self.height) / self.square
+            return amount_square
+        else:
+            self.rectangle = width2 * height2 
+            amount_rectangle = (self.width *self.height) / self.rectangle
+            return amount_rectangle
