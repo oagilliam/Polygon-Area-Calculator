@@ -44,4 +44,6 @@ class Rectangle:
             self.rectangle = width2 * height2 
             amount_rectangle = (self.width *self.height) / self.rectangle
             return amount_rectangle
-        
+
+r = Rectangle(4,8)
+print(r.set_height())
