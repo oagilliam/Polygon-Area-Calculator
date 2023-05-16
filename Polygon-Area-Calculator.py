@@ -38,12 +38,17 @@ class Rectangle:
     def get_amount_inside(self, width2, height2):
         if width2 == height2:
             self.square = width2**2
-            amount_square = (self.width *self.height) / self.square
+            amount_square = (self.width * self.height) / self.square
             return amount_square
         else:
             self.rectangle = width2 * height2 
-            amount_rectangle = (self.width *self.height) / self.rectangle
+            amount_rectangle = (self.width * self.height) / self.rectangle
             return amount_rectangle
 
-r = Rectangle(4,8)
-print(r.set_height())
+r = Rectangle(50,26)
+#print(r.set_width())
+#print(r.set_height())
+#print(r.get_area())
+#print(r.get_perimeter())
+#print(r.get_diagonal())
+#print(r.get_picture())
