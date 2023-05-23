@@ -46,8 +46,12 @@ class Square(Rectangle):
         self.width = side
         self.height = side
 
-    def set_side(self):
-        return self.width
+    def __str__(self):
+        return f'Square(side={self.width})'
+
+    def set_side(self, side):
+        self.width = side
+        self.height = side
     
     def set_width(self):
         return self.width
@@ -55,11 +59,3 @@ class Square(Rectangle):
     def set_height(self):
         return self.height
 
-r = Rectangle(50,26)
-#sqr = Square(4)
-#print(r.set_width())
-#print(r.set_height())
-#print(r.get_area())
-#print(r.get_perimeter())
-#print(r.get_diagonal())
-#print(r.get_picture())
