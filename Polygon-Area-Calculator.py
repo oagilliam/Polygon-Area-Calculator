@@ -3,8 +3,11 @@
 
 class Rectangle:
     def __init__(self, width, height):
-        self.width = int(width)
-        self.height = int(height)
+        self.width = width
+        self.height = height
+
+    def __str__(self):
+        return f'Rectangle(width={self.width}, height={self.height})'
 
     def set_width(self):
         return self.width
@@ -35,17 +38,25 @@ class Rectangle:
                     print('*', end="")
                 print("\n")
     
-    def get_amount_inside(self, width2, height2):
-        if width2 == height2:
-            self.square = width2**2
-            amount_square = (self.width * self.height) / self.square
-            return amount_square
-        else:
-            self.rectangle = width2 * height2 
-            amount_rectangle = (self.width * self.height) / self.rectangle
-            return amount_rectangle
+    def get_amount_inside(self, shape):
+        return int(self.get_area() / self.get_area())
+        
+class Square(Rectangle):
+    def __init__(self, side):
+        self.width = side
+        self.height = side
+
+    def set_side(self):
+        return self.width
+    
+    def set_width(self):
+        return self.width
+    
+    def set_height(self):
+        return self.height
 
 r = Rectangle(50,26)
+#sqr = Square(4)
 #print(r.set_width())
 #print(r.set_height())
 #print(r.get_area())
