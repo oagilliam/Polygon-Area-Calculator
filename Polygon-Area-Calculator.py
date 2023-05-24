@@ -11,10 +11,10 @@ class Rectangle:
     def __str__(self):
         return f'Rectangle(width={self.width}, height={self.height})'
 
-    def set_width(self):
+    def set_width(self, width):
         return self.width
     
-    def set_height(self):
+    def set_height(self, height):
         return self.height
     
     def get_area(self):
@@ -34,11 +34,8 @@ class Rectangle:
             tooBig = 'Too big for picture'
             return tooBig
         else:
-            for row in range(self.height):
-                print("*", end="")
-                for column in range(self.width-1):
-                    print('*', end="")
-                print("\n")
+            rec = (("*" * self.width) + "\n") * self.height
+            return rec
     
     def get_amount_inside(self, shape):
         return int(self.get_area() / self.get_area())
