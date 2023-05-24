@@ -33,10 +33,10 @@ class Rectangle:
         if self.width > 50 or self.height > 50:
           return "Too big for picture."
         
-        starShape = ""
-        for row in range(self.width):
-          starShape += "*" * self.height + "\n"
-        return starShape
+        shapeString = ""
+        for row in range(self.height):
+          shapeString += "*" * self.width + "\n"
+        return shapeString
     
     def get_amount_inside(self, shape):
         return (self.width // shape.width) * (self.height // shape.height)
